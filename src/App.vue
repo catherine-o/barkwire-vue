@@ -1,28 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <header>
+      <img src="https://www.dhresource.com/0x0s/f2-albu-g2-M00-EC-50-rBVaGlonsYKABJKmAAC9bQAfgVA050.jpg/lovely-dog-puppy-paw-heart-design-vinyl-decal.jpg">
+      <h1>Barkwire</h1>
+    </header>
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+  header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: hsl(250, 30%, 80%);
+    img {
+      width: 150px;
     }
   }
 }
