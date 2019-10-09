@@ -1,8 +1,14 @@
 <template>
      <div class="dog-listing">
         <img :src="dog.imageURL" alt="dog">
-        <h3>{{dog.name}}</h3>
-        <h3>{{dog.votes}}</h3>
+        <h3>
+            <router-link :to="{
+                name: 'dog', 
+                params: {id: dog.id}
+            }">
+                {{dog.name}}
+            </router-link>
+        </h3>
     </div>
 </template>
 

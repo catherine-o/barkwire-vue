@@ -1,7 +1,7 @@
 <template>
     <ul class="dog-list">
         <li v-for="dog in dogs" :key="dog.id">
-            <DogListing @click.native="upvoteDog(dog.id)" :dog="dog" />
+            <DogListing :dog="dog" />
         </li>
     </ul>
 </template>

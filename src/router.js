@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Dogs from '@/views/Dogs'
+import Dog from '@/views/Dog'
 
 
 Vue.use(Router)
@@ -11,6 +12,11 @@ export default new Router({
   routes: [{
     path: "/",
     name: "index",
-    component: Dogs
+    component: Dogs,
+    children: [{
+      name: "dog",
+      path: "/:id",
+      component: Dog
+    }]
   }]
 })

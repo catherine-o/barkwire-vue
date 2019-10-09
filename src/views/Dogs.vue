@@ -1,7 +1,10 @@
 <template>
     <div class="dogs">
         <h2>Dogs</h2>
-        <DogList :dogs="dogs" @upvoteDog="upvoteDog"/>
+        <div class="master-detail">
+            <DogList :dogs="dogs" @upvoteDog="upvoteDog"/>
+            <router-view />
+        </div>
     </div>
 </template>
 
@@ -28,4 +31,11 @@ export default {
 </script>
 
 <style lang="scss">
+.dogs {
+    .master-detail {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 2rem;
+    }
+}
 </style>
