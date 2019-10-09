@@ -23,17 +23,21 @@ export default new Vuex.Store({
   state: {
     dogs: []
   },
-  getters: {
+  getters: { //like a computed propert for the store // to look up dog in state by id
     //(higher order function (function that returns another function))
     dog: state => id => {
       return state.dogs.find(dog => +dog.id === +id) || {}
-    }
+    },
     //above same as:
       // dog: function(state){
       //   return finction(id){
 
       //   }
       // }
+    //another example of a getter:
+    // dogCount(state){
+    //   return state.dogs.length
+    // }
   },
   mutations: {
     setDogs(state, dogs){
